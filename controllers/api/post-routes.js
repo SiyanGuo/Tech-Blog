@@ -31,7 +31,6 @@ router.get('/', (req, res) => {
         });
 });
 
-
 //get a single Post
 router.get('/:id', (req, res) => {
     Post.findOne({
@@ -80,8 +79,7 @@ router.post('/', (req, res) => {
         });
 });
 
-
-//update a post's title
+//update a post
 router.put('/:id', (req, res) => {
     Post.update(req.body,  {
             where: { id: req.params.id },
@@ -98,7 +96,6 @@ router.put('/:id', (req, res) => {
             res.status(500).json(err);
         });
 });
-
 
 //delete a post
 router.delete('/:id', (req, res) => {
