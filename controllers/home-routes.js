@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
-    // console.log(req.session);
+    console.log(req.session);
 
     Post.findAll({
         attributes: [
@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
             res.render('homepage', {
                 posts,
-                // loggedIn: req.session.loggedIn
+                loggedIn: req.session.loggedIn
             });
         })
         .catch(err => {
@@ -87,7 +87,7 @@ router.get('/post/:id', (req, res) => {
             // pass data to template
             res.render('single-post', {
                 post,
-                // loggedIn: req.session.loggedIn
+                loggedIn: req.session.loggedIn
             });
         })
         .catch(err => {
