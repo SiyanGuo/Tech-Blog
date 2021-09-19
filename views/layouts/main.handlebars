@@ -9,28 +9,28 @@
 </head>
 
 <body>
-    <div class="wrapper">
         <header>
             <h1>
-                <a href="/">Tech Blog</a>
+                <a href="/">Tech Blog </a>
             </h1>
 
             <nav>
                 <a href="/">Home</a>
-                {{#if loggedIn}}
                 <a href="/dashboard">Dashboard</a>
+                {{#if loggedIn}}
                 <button id="logout" class="btn-no-style">Logout</button>
                 {{else}}
-                <a href="/login">Login/Signup</a>
+                <a href="/login">Sign In</a>
                 {{/if}}
             </nav>
 
         </header>
+    <div class="wrapper">
         <main>
             {{{ body }}}
         </main>
         <footer>
-            Coded with 💜 by Siyan Guo!
+            Coded with 💚 by Siyan Guo!
         </footer>
     </div>
     {{#if loggedIn}}
