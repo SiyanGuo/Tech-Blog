@@ -14,18 +14,12 @@ Post.init(
             autoIncrement: true
         },
         title: {
-            type: DataTypes.STRING(50),
+            type: DataTypes.STRING,
             allowNull: false,
-            validate:{
-                len:[1]
-            }
         },
         content: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate:{
-                len:[1]
-            }
         },
         //foreign key of Post
         user_id: {
