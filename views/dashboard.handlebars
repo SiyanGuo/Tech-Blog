@@ -1,0 +1,26 @@
+<section>
+    <h3><a href="/dashboard/add">Create New Post</a> </h3>
+</section>
+
+{{#if posts.length}}
+<section>
+    <h2>Your Blogs</h2>
+    <ul>
+        {{#each posts as |post|}}
+        {{!-- <li>
+            {{> post-info post}}
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        </li> --}}
+
+        <article class="post">
+            <div class="title">
+                <a href="/dashboard/edit/{{post.id}}">{{post.title}} <p>{{post.created_at}}</p></a>
+                
+            </div>
+
+        </article>
+        {{/each}}
+    </ul>
+</section>
+{{/if}}
+
